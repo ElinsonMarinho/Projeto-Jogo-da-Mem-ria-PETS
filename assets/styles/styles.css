@@ -1,0 +1,128 @@
+
+body {
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: yellow;
+  background-size: cover;
+}
+h3{
+  padding-top: 15px;
+}
+.header{
+  padding: 15px 50px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  background: rgba(19, 36, 62, 0.87);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(37, 71, 122, 0.87);
+}
+.memory-game {
+  width: 440px;
+  height: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 800px;
+}
+
+.memory-card {
+  width: 120px;
+  height: 110px;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgba(70, 113, 179, 0.87);
+}
+
+#memory-board {
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  background: #dddddd;
+  width: 600px;
+  height: 600px;
+  padding: 50px;
+  margin: auto;
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 20px -6px rgb(36, 36, 252);
+}
+
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 15px;
+  background: rgb(97, 97, 240);
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 480px){
+  body{
+    height: 100vh;
+    width: 100vw;
+  }
+  h1{
+    font-size: 20px;
+  }
+  .memory-game{
+    width: 243px;
+    height: 324px;
+  }
+  .memory-card{
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+  }
+  .front-face,
+  .back-face{
+    padding: 3px;
+  }
+}
+  
+  .banner {
+    display: flex;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+  }
+  h1 {
+    color: rgba(255, 0, 0, 0.9);
+    font-weight: bolder;
+    font-size: 67px;
+    text-align: center;
+    text-shadow: 0px 0px 20px #969696;
+  }
+ 
+
+  .Pontuacao {
+    background-color: silver;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    width: 180px;
+    height: 50px;
+    margin: auto;
+  }
